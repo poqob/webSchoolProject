@@ -20,7 +20,21 @@
 
 <style>
     .sliderResimleri {
-        max-height: 400px;
+        max-height: 600px;
+        max-width: auto;
+    }
+
+    p {
+        color: antiquewhite;
+        font-size: xx-large;
+        font-weight: 800;
+
+    }
+
+    h5 {
+        color: antiquewhite;
+        font-weight: bold;
+        font-size: xx-large;
     }
 </style>
 
@@ -118,8 +132,8 @@
 
 <body>
 
-
-    <br><br><br>
+    <!-- slider -->
+    <br><br>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -128,29 +142,53 @@
                 aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active sliderResimleri " data-bs-interval="10000">
-                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/Golyazi/8.jpg?mode=resize&width=1200" class="d-block w-100" alt="...">
+
+            <div class="carousel-item active  " data-bs-interval="10000"><a
+                    href="http://bursa.gov.tr/cennetten-bir-kose-golyazi" target="_blank">
+                    <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/Golyazi/8.jpg?mode=resize&width=1200"
+                        class="d-block w-100 sliderResimleri" alt="göl yazı"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
+                    <h5>Göl Yazı</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
-            <div class="carousel-item  sliderResimleri" data-bs-interval="2000" >
-                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/inkaya/576_28689_162966.jpg?mode=resize&width=1200" class="d-block w-100" alt="...">
+            <div class="carousel-item  " data-bs-interval="2000"><a
+                    href="http://bursa.gov.tr/inkaya-cinari-gokyuzunu-kucaklayan-tek-basina-bir-orman" target="_blank">
+                    <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/inkaya/576_28689_162966.jpg?mode=resize&width=1200"
+                        class="d-block w-100 sliderResimleri" alt="inkaya çınarı"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
+                    <h5>İnkaya Çınarı</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
-            <div class="carousel-item sliderResimleri">
-                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/%C4%B0znik_ayasofya/AYASOFYA%20_105_.JPG?mode=resize&width=1200" class="d-block w-100" alt="...">
+
+            <div class="carousel-item " data-bs-interval="3000"><a
+                    href="http://bursa.gov.tr/iznike-dort-kapidan-girilir-ayasofya-butun-insanliga-selam-verir"
+                    target="_blank">
+                    <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/%C4%B0znik_ayasofya/AYASOFYA%20_105_.JPG?mode=resize&width=1200"
+                        class="d-block w-100 sliderResimleri" alt="iznik ayasofya camiiF"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
+                    <h5>İznik Ayasofya Camii</h5>
                     <p>Some representative placeholder content for the third slide.</p>
                 </div>
             </div>
+
+            <div class="carousel-item " data-bs-interval="4000">
+                <a href="http://bursa.gov.tr/uzuncarsi" target="_blank"><img
+                        src="http://bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/kapali-carsi/6.JPG?mode=resize&width=1200"
+                        class="d-block w-100 sliderResimleri" alt="uzun Çarşı"></a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Uzun Çarşı</h5>
+                    <p>Some representative placeholder content for the fourth slide.</p>
+                </div>
+            </div>
+
+            <!-- slider buttons -->
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -162,7 +200,9 @@
         </button>
     </div>
 
-
+    <!-- bilgilendirme -->
+    
+    
 
 
 
