@@ -11,3 +11,6 @@ ilgi alanlarım sayfası (apili)
 login ebtegre ıksyb :D
 
 iletişim sayfası
+
+
+js: let yalnızca blok içerisinde yaratılan değişkenler için var. 
