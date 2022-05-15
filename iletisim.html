@@ -19,6 +19,15 @@
 </head>
 
 
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+
+
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 
     <div class="container-fluid">
@@ -111,6 +120,64 @@
 </div>
 
 <body>
+    <!--form-->
+    <br><br><br><br><br><br>
+    <h1>İletişim</h1><br><br><br>
+
+    <div class="container">
+
+        <form class="mx-auto w-50  mail-form" action="php\kontrol.php" method="post" name="form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Ad</span>
+                <input type="text" class="form-control" placeholder="isiminiz" name="ad" aria-describedby="basic-addon1"
+                    autofocus>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Soyad</span>
+                <input type="text" class="form-control" placeholder="soyad" name="soyad"
+                    aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Mail Adresi</span>
+                <input type="text" class="form-control" placeholder="@mail" name="mail" aria-describedby="basic-addon1">
+            </div>
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="cinsiyet" value="kadin" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Kadın
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="cinsiyet" value="erkek" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Erkek
+                </label>
+            </div>
+            <br>
+
+
+            <div class="input-group">
+                <span class="input-group-text">Mesajınız</span>
+                <textarea class="form-control" aria-label="With textarea" name="textArea"
+                    placeholder="mesajınız"></textarea>
+            </div>
+            <br> <br>
+
+
+            <input class="btn btn-secondary" type="submit" value="Gönder" onsubmit="">
+            <input class="btn btn-secondary" type="reset" value="Temizle">
+
+
+
+        </form>
+
+    </div>
+
+    
 
 
 
@@ -122,33 +189,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    <script>
-        //girdi kontrol.
-        function func() {
-
-            let girisButonu = document.getElementById("girisButonu").innerHTML;
-            document.getElementById("girisButonu").innerHTML = "b201210078";
-            document.getElementById("girisButonu");
-        }
-    </script>
-
-    <script>
-        function girisYapildiMi() {
-
-            if (document.getElementById("girisButonu").innerHTML != "Giriş yap") {
-                alert("farklı aga");
-            }
-        }
-    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
