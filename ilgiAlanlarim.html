@@ -109,8 +109,61 @@
         </div>
     </div>
 </div>
+<style>
+    img {
+        width: auto;
+        height: 325px;
+        align-items: center;
+    }
 
-<body>
+    p {
+        width: auto;
+        font-weight: 500;
+        align-items: center;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    main {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+
+
+    code {
+        color: firebrick;
+    }
+
+
+
+    button {
+        margin-top: 20px;
+    }
+</style>
+
+<body style="background-color:grey;">
+
+
+    <br><br><br><br>
+    <img src="kaynak\1.jpeg" alt="">
+    <img src="kaynak\2.jpeg" alt="">
+    <img src="kaynak\3.jpeg" alt="">
+    <img src="kaynak\4.jpeg" alt="">
+    <img src="kaynak\6.jpeg" alt="">
+    <br><br>
+
+    <p> Marangozluk, maketçilik ve mekanik ilgi alanlarımdandır.</p>
+    <br><br>
+
+    <img src="https://images.dog.ceo/breeds/redbone/n02090379_3899.jpg" id="myImage"><br>
+
+    <button>Rastgele hayvan resmi</button>
 
 
 
@@ -122,13 +175,19 @@
 
 
 
+    <script>
+        document.querySelector('button').addEventListener('click', function () {
+            fetch('https://dog.ceo/api/breeds/image/random')
+                .then((response) => {
+                    return response.json();
+                })
+                .then((myContent) => {
+                    myImage.src = myContent['message'];
+                });
+        }, false);
 
 
-
-
-
-
-
+    </script>
 
 
     <script>
