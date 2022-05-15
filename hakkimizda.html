@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="utf-8">
@@ -24,41 +24,27 @@
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 
     <div class="container-fluid">
-        <a class="navbar-brand" href="hakkimizda.html">Hakkımda</a>
 
         <!-- Button trigger modal -->
-        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" id="girisButonu"
             data-bs-target="#exampleModalCenter">Giriş
             yap</button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <span>bosluk</span>
+
+        <span class="navbar-text justify-text-center" id="bursa">
+            Bursa
+        </span>
+
+        <span>bosluk</span>
 
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse " id="navbarText">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Şehir</a>
@@ -79,6 +65,7 @@
                     <a class="nav-link active" href="hakkimizda.html">Hakkımda</a>
                 </li>
             </ul>
+            <span>boslukAga</span>
             <span class="navbar-text">
                 Mustafanın sitesi
             </span>
@@ -86,18 +73,79 @@
     </div>
 </nav>
 
+<!-- giris paneli Model -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Giriş</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- girisler -->
+            <form action="php\girisKontrol.php" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Admin</label>
+                        <input type="text" class="form-control" id="Admin" name="mail" placeholder="b201210078@sakarya.edu.tr"
+                            name="textFields" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="Password" name="pass" placeholder="b201210078"
+                            name="textFields" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" id="girisSubmit" class="btn btn-secondary" data-dismiss="modal"
+                        onsubmit="func()">Giriş
+                        Yap</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
 <body>
 
 
+    <br><br><br><br>
+    <button class="btn btn-outline-success col-md-2 row-md-3" onclick="func()" type="button" data-bs-toggle="modal"
+        data-bs-target="#zort" >zort</button>
 
 
 
 
 
 
+    <script>
+        //girdi kontrol.
+        function func() {            
+            
+            let girisButonu=document.getElementById("girisButonu").innerHTML;
+            document.getElementById("girisButonu").innerHTML="b201210078";
+            document.getElementById("girisButonu");
+        }
+    </script>
+
+    <script>
+        function girisYapildiMi(){
+            
+            if (document.getElementById("girisButonu").innerHTML!="Giriş yap") {
+                alert("farklı aga");
+            }
+        }
+    </script>
 
 
 
+   
 
 
 
