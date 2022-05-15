@@ -1,14 +1,12 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-
+    <title>Prussa</title>
 
     <link rel="stylesheet" href="css\hakkimizda.css">
 
@@ -47,19 +45,19 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Şehir</a>
+                    <a class="nav-link" aria-current="page" href="sehrim.html">Şehir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Miras</a>
+                    <a class="nav-link" href="mirasimiz.html">Miras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">İlgi Alanlarım</a>
+                    <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">İletişim</a>
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Özgeçmişim</a>
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmişim</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="hakkimizda.html">Hakkımda</a>
@@ -90,8 +88,8 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Admin</label>
-                        <input type="text" class="form-control" id="Admin" name="mail" placeholder="b201210078@sakarya.edu.tr"
-                            name="textFields" required>
+                        <input type="text" class="form-control" id="Admin" name="mail"
+                            placeholder="b201210078@sakarya.edu.tr" name="textFields" required>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Password</label>
@@ -115,9 +113,18 @@
 <body>
 
 
-    <br><br><br><br>
-    <button class="btn btn-outline-success col-md-2 row-md-3" onclick="func()" type="button" data-bs-toggle="modal"
-        data-bs-target="#zort" >zort</button>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -126,28 +133,22 @@
 
     <script>
         //girdi kontrol.
-        function func() {            
-            
-            let girisButonu=document.getElementById("girisButonu").innerHTML;
-            document.getElementById("girisButonu").innerHTML="b201210078";
+        function func() {
+
+            let girisButonu = document.getElementById("girisButonu").innerHTML;
+            document.getElementById("girisButonu").innerHTML = "b201210078";
             document.getElementById("girisButonu");
         }
     </script>
 
     <script>
-        function girisYapildiMi(){
-            
-            if (document.getElementById("girisButonu").innerHTML!="Giriş yap") {
+        function girisYapildiMi() {
+
+            if (document.getElementById("girisButonu").innerHTML != "Giriş yap") {
                 alert("farklı aga");
             }
         }
     </script>
-
-
-
-   
-
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"

@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-
+    <title>Prussa</title>
 
     <link rel="stylesheet" href="css\hakkimizda.css">
 
@@ -20,19 +18,25 @@
 
 </head>
 
+<style>
+    .sliderResimleri {
+        max-height: 400px;
+    }
+</style>
+
 
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 
     <div class="container-fluid">
 
         <!-- Button trigger modal -->
-        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" id="girisButonu"
             data-bs-target="#exampleModalCenter">Giriş
             yap</button>
 
         <span>bosluk</span>
 
-        <span class="navbar-text justify-text-center">
+        <span class="navbar-text justify-text-center" id="bursa">
             Bursa
         </span>
 
@@ -47,19 +51,19 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Şehir</a>
+                    <a class="nav-link" aria-current="page" href="sehrim.html">Şehir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Miras</a>
+                    <a class="nav-link" href="mirasimiz.html">Miras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">İlgi Alanlarım</a>
+                    <a class="nav-link" href="ilgiAlanlarim.html">İlgi Alanlarım</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">İletişim</a>
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Özgeçmişim</a>
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmişim</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="hakkimizda.html">Hakkımda</a>
@@ -84,12 +88,30 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Giriş Yap</button>
-            </div>
+
+            <!-- girisler -->
+            <form action="php\girisKontrol.php" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Admin</label>
+                        <input type="text" class="form-control" id="Admin" name="mail"
+                            placeholder="b201210078@sakarya.edu.tr" name="textFields" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="Password" name="pass" placeholder="b201210078"
+                            name="textFields" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" id="girisSubmit" class="btn btn-secondary" data-dismiss="modal"
+                        onsubmit="func()">Giriş
+                        Yap</button>
+                </div>
+
+            </form>
+
         </div>
     </div>
 </div>
@@ -97,6 +119,48 @@
 <body>
 
 
+    <br><br><br>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active sliderResimleri " data-bs-interval="10000">
+                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/Golyazi/8.jpg?mode=resize&width=1200" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item  sliderResimleri" data-bs-interval="2000" >
+                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/inkaya/576_28689_162966.jpg?mode=resize&width=1200" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item sliderResimleri">
+                <img src="http://www.bursa.gov.tr/kurumlar/bursa.gov.tr/Bursa.gov/bursa/%C4%B0znik_ayasofya/AYASOFYA%20_105_.JPG?mode=resize&width=1200" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 
 
@@ -107,12 +171,30 @@
 
 
 
-    
 
 
 
 
 
+
+    <script>
+        //girdi kontrol.
+        function func() {
+
+            let girisButonu = document.getElementById("girisButonu").innerHTML;
+            document.getElementById("girisButonu").innerHTML = "b201210078";
+            document.getElementById("girisButonu");
+        }
+    </script>
+
+    <script>
+        function girisYapildiMi() {
+
+            if (document.getElementById("girisButonu").innerHTML != "Giriş yap") {
+                alert("farklı aga");
+            }
+        }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
